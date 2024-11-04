@@ -1,0 +1,171 @@
+:root {
+    --header-background: #ffffff;
+    --header-color: #303030;
+    --menu-background: #ffffff;
+    --menu-text-color: #009d95;
+    --menu-font-family: 'Work Sans', sans-serif;
+    --menu-font-size: 14px;
+    --header-height: 136px;
+    --slideshow-background: #009d95;
+    --slideshow-text-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: var(--menu-font-family);
+}
+
+header.sectionHeader {
+    background-color: var(--header-background);
+    color: var(--header-color);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header_Wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.HorizontalList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.HorizontalList li {
+    margin: 0 20px;
+}
+
+.HorizontalList a {
+    text-decoration: none;
+    color: var(--header-color);
+    font-size: var(--menu-font-size);
+    padding: 15px 20px;
+    transition: color 0.3s;
+}
+
+.HorizontalList a:hover {
+    color: #009d95;
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-right li {
+    margin-left: 20px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.slideshow {
+    position: relative;
+}
+
+.slideshow_imagecontainer {
+    position: relative;
+    width: 100%;
+    height: 562.85px;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.slideshow_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--slideshow-text-color);
+    text-align: center;
+}
+
+.slideshow_text h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.slideshow_text p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.slideshow_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: var(--slideshow-background);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #007f70;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .HorizontalList {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .HorizontalList li {
+        margin: 10px 0;
+    }
+
+    .menu-right {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+
+    .slideshow_text h2 {
+        font-size: 20px;
+    }
+
+    .slideshow_text p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+}
